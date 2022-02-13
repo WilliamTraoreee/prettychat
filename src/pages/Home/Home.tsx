@@ -4,6 +4,7 @@ import './Home.scss';
 import Terminal from '../../themes/Terminal/Terminal'
 import randomMessage from "../../utils/FakeChat";
 import { Message } from "../../types/Messages";
+import Will from "../../themes/Will/Will";
 export default function Home() {
   const [username, setUsername] = useState<string>("");
   const [theme, setTheme] = useState<string>("Terminal");
@@ -57,6 +58,7 @@ export default function Home() {
               onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setTheme(e.target.value)}
             >
               <option value="Terminal">Terminal</option>
+              <option value="Will">Will</option>
             </select>
           </section>
 
@@ -68,6 +70,7 @@ export default function Home() {
       <div className="demo">
         <div className="demo-chat">
           {theme === 'Terminal' && <Terminal messages={[...demo]}  />}
+          {theme === 'Will' && <Will messages={[...demo]}  />}
         </div>
       </div>
     </div>

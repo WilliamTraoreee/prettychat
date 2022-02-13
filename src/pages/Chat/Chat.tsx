@@ -4,6 +4,7 @@ import { EmoteOptions, parse } from "simple-tmi-emotes";
 import tmi from "tmi.js";
 import { useSearchParams } from "react-router-dom";
 import { Message } from "../../types/Messages";
+import Will from "../../themes/Will/Will";
 
 export default function Chat() {
   const [searchParams] = useSearchParams();
@@ -81,6 +82,8 @@ export default function Chat() {
   switch (themeChoose) {
     case "Terminal":
       return <Terminal messages={messages} />;
+    case "Will":
+      return <Will messages={messages} />
     default:
       return <Terminal messages={messages} />;
   }
