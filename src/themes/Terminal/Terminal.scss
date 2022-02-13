@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
 .theme-terminal {
   background: #202124;
   color: #E8EAED;
@@ -19,6 +21,7 @@
   font-family: Consolas;
   font-size: .8em;
   align-items: baseline;
+  font-family: 'Inconsolata', monospace;
 
   strong {
     font-weight: 700;
