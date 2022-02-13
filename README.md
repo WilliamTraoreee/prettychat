@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+### TODO 
+
+Le but est de proposer un chat Twitch pour les streamers en mettant juste son pseudo et en choisissant un thème 
+
+## Pages 
+
+- Accueil avec pseudo + theme
+- Page de chat par theme 
+
