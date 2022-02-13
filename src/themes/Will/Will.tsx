@@ -4,7 +4,7 @@ import './Will.scss';
 
 export default function Will(props: { messages: Message[] }) {
 
-  const msgs = props.messages.reverse();
+  const msgs = props.messages;
 
   return (
     <div className="chat theme-will">
