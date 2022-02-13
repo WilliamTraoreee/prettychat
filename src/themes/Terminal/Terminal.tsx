@@ -10,7 +10,7 @@ export default function Terminal(props: { messages: Message[] }) {
       {msgs.map((msg) => (
         <TerminalMessage key={msg.id} message={msg} />
       ))}
-      <div className="terminal-message">
+      <div className="empty">
         <span className="chevron">{">"}</span>
         <span className="cursor"></span>
       </div>

@@ -18,18 +18,6 @@
   font-size: .8em;
   align-items: baseline;
 
-  .chevron {
-    color: #367CF1;
-    font-weight: 600;
-  }
-
-  .cursor {
-    width: 1px;
-    height: 16px;
-    background: white;
-    animation: cursor 1s infinite linear;
-  }
-
   strong {
     font-weight: 700;
   }
@@ -45,11 +33,6 @@
     width: 20px;
     height: auto;
     vertical-align: middle;
-  }
-
-  &:last-of-type {
-    align-items: center;
-    gap: 8px;
   }
 
   &.vip {
@@ -71,6 +54,28 @@
     border-top: 1px solid #E91916;
     border-bottom: 1px solid #E91916;
     margin-top: -1px;
+  }
+}
+
+.empty {
+  display: flex;
+  gap: 16px;
+  padding: 8px 16px;
+  border-top: 1px solid #494C50;
+  font-family: Consolas;
+  font-size: .8em;
+  align-items: center;
+
+  .chevron {
+    color: #367CF1;
+    font-weight: 600;
+  }
+
+  .cursor {
+    width: 1px;
+    height: 16px;
+    background: white;
+    animation: cursor 1s infinite linear;
   }
 }
 
