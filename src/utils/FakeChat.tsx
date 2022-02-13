@@ -9,7 +9,7 @@ function randomMessage() {
     twitch: getPseudo().toLocaleLowerCase(),
     date: new Date(),
     message: getMessage(),
-    badges: undefined,
+    badges: getBadges(),
     mod: false,
     subscriber: false,
     color: getColor(),
@@ -17,6 +17,25 @@ function randomMessage() {
   }
 
   return message;
+
+}
+
+function getBadges() {
+
+  const badges = [
+    {vip: '1'},
+    {moderator: '1'},
+    {broadcaster: '1'},
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined,
+    undefined
+  ]
+
+  return badges[Math.floor(Math.random() * badges.length)]
 
 }
 
