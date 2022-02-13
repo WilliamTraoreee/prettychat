@@ -8,6 +8,7 @@
   height: 100%;
   overflow: hidden;
   padding-bottom: 33px;
+  position: relative;
 }
 
 .terminal-message {
@@ -66,7 +67,7 @@
   font-family: Consolas;
   font-size: .8em;
   align-items: center;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
