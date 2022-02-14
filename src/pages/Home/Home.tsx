@@ -5,6 +5,8 @@ import Terminal from "../../themes/Terminal/Terminal";
 import randomMessage from "../../utils/FakeChat";
 import { Message } from "../../types/Messages";
 import Will from "../../themes/Will/Will";
+import CleanyBear from "../../themes/CleanyBear/CleanyBear";
+
 export default function Home() {
   const [username, setUsername] = useState<string>("");
   const [theme, setTheme] = useState<string>("Terminal");
@@ -76,6 +78,7 @@ export default function Home() {
         <div className="demo-chat">
           {theme === "Terminal" && <Terminal messages={[...demo]} />}
           {theme === "Will" && <Will messages={[...demo]} />}
+          {theme === "CleanyBear" && <CleanyBear messages={[...demo]} />}
         </div>
       </div>
     </div>

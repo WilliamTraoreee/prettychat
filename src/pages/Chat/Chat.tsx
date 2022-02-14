@@ -5,6 +5,7 @@ import tmi from "tmi.js";
 import { useSearchParams } from "react-router-dom";
 import { Message } from "../../types/Messages";
 import Will from "../../themes/Will/Will";
+import CleanyBear from "../../themes/CleanyBear/CleanyBear";
 
 export default function Chat() {
   const [searchParams] = useSearchParams();
@@ -12,10 +13,6 @@ export default function Chat() {
   const username: string | null = searchParams.get("username");
   const themeChoose: string | null = searchParams.get("theme");
   const client = new tmi.Client({ channels: [username || ""] });
-
-  client.on("connected", () => {
-    console.log("Je suis bien connecté");
-  });
 
   client.on("message", (_, tags, message) => {
     const options: EmoteOptions = {
@@ -45,13 +42,17 @@ export default function Chat() {
     });
   });
 
+  client.on("connected", () => {
+    console.log("Je suis bien connecté");
+  });
+
   client.on("messagedeleted", (_channel, _username, _deleteMessage, userstate) => {
     setMessages((msgs: Message[]) => {
       const msgId = userstate["target-msg-id"];
       const allMsgs = [...msgs];
       const cleanMsgs = allMsgs.filter((m) => m.id !== msgId);
 
-      return [...cleanMsgs];
+      return cleanMsgs;
     });
   });
 
@@ -60,7 +61,7 @@ export default function Chat() {
       const allMsgs = [...msgs];
       const cleanMsgs = allMsgs.filter((m) => m.twitch !== username);
 
-      return [...cleanMsgs];
+      return cleanMsgs;
     });
   });
 
@@ -69,7 +70,7 @@ export default function Chat() {
       const allMsgs = [...msgs];
       const cleanMsgs = allMsgs.filter((m) => m.twitch !== username);
 
-      return [...cleanMsgs];
+      return cleanMsgs;
     });
   });
 
@@ -83,7 +84,9 @@ export default function Chat() {
     case "Terminal":
       return <Terminal messages={messages} />;
     case "Will":
-      return <Will messages={messages} />
+      return <Will messages={messages} />;
+    case "CleanyBear":
+      return <CleanyBear messages={messages} />;
     default:
       return <Terminal messages={messages} />;
   }
