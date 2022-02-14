@@ -11,8 +11,8 @@ export default function WillMessage(props: { message: Message }) {
     >
       <section className="container">
         <div className="message">
-          <div className="message-content" dangerouslySetInnerHTML={{ __html: msg.message }}></div>
-          <div className="user" style={{ backgroundColor: `${msg.color}30`, color: `${msg.color}` }}>
+          <div className="message-content" dangerouslySetInnerHTML={{ __html: msg.message }} />
+          <div className="user" style={{ backgroundColor: `${msg.color || "#000000"}30`, color: `${msg.color}` }}>
             {msg.username}
           </div>
         </div>
