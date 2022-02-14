@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+.theme-cleany-bear {
+  $vip-color: rgb(218, 73, 193);
+  $moderator-color: rgb(73, 218, 158);
+  $broadcaster-color: rgb(201, 55, 55);
+  $skew: 7deg;
+
+  padding: 40px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: "Nunito", sans-serif;
+  gap: 20px;
+  font-weight: normal;
+  background-color: #1d1d32;
+
+  @function defaultShadow() {
+    @return 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  @mixin status($color) {
+    box-shadow: 0 0 0 5px rgba($color, 0.7), defaultShadow();
+
+    .user {
+      background-color: $color !important;
+      color: white !important;
+    }
+
+    &::after {
+      background-image: linear-gradient(to bottom right, $color, white, white);
+    }
+
+    &::before {
+      background-color: $color;
+    }
+  }
+
+  @keyframes pop {
+    0% {
+      opacity: 0;
+      left: 110%;
+    }
+
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  img {
+    max-height: 35px;
+  }
+
+  .wrapper {
+    animation: pop 1s cubic-bezier(1, 0, 0, 1) both;
+    position: relative;
+    border-radius: 10px;
+    transform: skew(-7deg);
+    will-change: left;
+
+    &.vip,
+    &.moderator,
+    &.broadcaster {
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.3;
+        border-radius: 10px;
+      }
+
+      &::before {
+        $s: 30px;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: $s;
+        width: $s;
+        height: $s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: skew($skew) translate(-50%, -30%);
+        z-index: 1;
+      }
+    }
+    &.vip {
+      &::before {
+        background: url('data:image/svg+xml;utf8,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 10L5 20L23.5 41L42 20L30 10H17Z" fill="white"/></svg>')
+          center center no-repeat;
+        background-size: 20px;
+      }
+      @include status($vip-color);
+    }
+
+    &.moderator {
+      &::before {
+        background: url('data:image/svg+xml;utf8,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.4012 12.1533C14.6015 11.5913 14.7105 10.986 14.7105 10.3553C14.7105 7.39763 12.3129 5 9.35526 5C6.39763 5 4 7.39763 4 10.3553C4 13.3129 6.39763 15.7105 9.35526 15.7105C10.0599 15.7105 10.7328 15.5744 11.3491 15.3271L13.3574 17.883L8.86842 22.0395L11.3026 25.4474L14.7663 22.1074L30.2895 41.0263H41V31.7763L21.236 15.8687L24.9342 12.3026L22.0132 9.86842L17.0892 14.4277L14.4012 12.1533Z" fill="white"/></svg>')
+          center center no-repeat;
+        background-size: 20px;
+      }
+      @include status($moderator-color);
+    }
+
+    &.broadcaster {
+      &::before {
+        background: url('data:image/svg+xml;utf8,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 12C9.79086 12 8 13.7909 8 16V32C8 34.2091 9.79086 36 12 36H27C29.2091 36 31 34.2091 31 32V28.9074L41 34V14L31 20.0185V16C31 13.7909 29.2091 12 27 12H12Z" fill="white"/></svg>')
+          center center no-repeat;
+        background-size: 20px;
+      }
+      @include status($broadcaster-color);
+    }
+  }
+
+  .container {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: defaultShadow();
+    position: relative;
+    overflow: hidden;
+
+    // EERRKKKK
+    .user {
+      $r: 10px;
+      border-radius: 0 0 $r $r;
+      transform: skew(-$skew);
+      padding: 5px 10px;
+      position: relative;
+      left: -5px;
+      width: 110%;
+    }
+  }
+
+  .message {
+    transform: skew($skew);
+    color: black;
+  }
+
+  .message-content {
+    padding: 15px 20px;
+  }
+}
