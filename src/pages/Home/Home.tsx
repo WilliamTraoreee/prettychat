@@ -66,6 +66,7 @@ export default function Home() {
               >
                 <option value="Terminal">Terminal</option>
                 <option value="Will">Will</option>
+                <option value="CleanyBear">CleanyBear</option>
               </select>
             </section>
 
