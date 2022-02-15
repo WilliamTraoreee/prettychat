@@ -6,6 +6,7 @@ import randomMessage from "../../utils/FakeChat";
 import { Message } from "../../types/Messages";
 import Will from "../../themes/Will/Will";
 import CleanyBear from "../../themes/CleanyBear/CleanyBear";
+import BearBoy from "../../themes/BearBoy/BearBoy";
 
 export default function Home() {
   const [username, setUsername] = useState<string>("");
@@ -67,6 +68,7 @@ export default function Home() {
                 <option value="Terminal">Terminal</option>
                 <option value="Will">Will</option>
                 <option value="CleanyBear">CleanyBear</option>
+                <option value="BearBoy">BearBoy</option>
               </select>
             </section>
 
@@ -80,6 +82,7 @@ export default function Home() {
           {theme === "Terminal" && <Terminal messages={[...demo]} />}
           {theme === "Will" && <Will messages={[...demo]} />}
           {theme === "CleanyBear" && <CleanyBear messages={[...demo]} />}
+          {theme === "BearBoy" && <BearBoy messages={[...demo]} />}
         </div>
       </div>
     </div>

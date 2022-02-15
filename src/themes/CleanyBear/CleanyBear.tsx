@@ -2,7 +2,7 @@ import { Message } from "../../types/Messages";
 import CleanyBearMessage from "./CleanyBearMessage";
 import "./CleanyBear.scss";
 
-export default function Will(props: { messages: Message[] }) {
+export default function CleanyBear(props: { messages: Message[] }) {
   const msgs = props.messages;
 
   return (

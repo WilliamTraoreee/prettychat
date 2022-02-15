@@ -1,6 +1,6 @@
 import { Message } from "../../types/Messages";
 
-export default function WillMessage(props: { message: Message }) {
+export default function CleanyBearMessage(props: { message: Message }) {
   const msg = props.message;
 
   return (

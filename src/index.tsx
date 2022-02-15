@@ -7,8 +7,8 @@ import Home from "./pages/Home/Home";
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />}></Route>
-      <Route path="/chat" element={<Chat />}></Route>
+      <Route path="/" element={<Home />} />
+      <Route path="/chat" element={<Chat />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById("root"),

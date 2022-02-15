@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.theme-bear-boy {
+  padding: 40px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: "Press Start 2P", cursive;
+  font-weight: normal;
+  background-color: #84c791;
+  color: #0c272b;
+  line-height: 1.5;
+  font-size: 0.7rem;
+  gap: 5px;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 10em rgba(0, 0, 0, 0.75);
+
+  @keyframes track {
+    0% {
+      opacity: 0;
+    }
+    10%,
+    50%,
+    75% {
+      opacity: 0.2;
+    }
+    40%,
+    20% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .message-wrap {
+    animation: track 0.5s both;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 20px 25px;
+    will-change: transform;
+    border-image: url("./frame.png") 30 / 30px;
+
+    &.vip {
+      border-image: url("./framevip.png") 30 / 30px;
+    }
+
+    &.moderator {
+      border-image: url("./framemod.png") 30 / 30px;
+    }
+
+    &.broadcaster {
+      border-image: url("./framebroad.png") 30 / 30px;
+    }
+  }
+
+  .message {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    max-height: 30px;
+    margin: 0 5px;
+  }
+
+  .user {
+    margin-bottom: 10px;
+    opacity: 0.6;
+  }
+}

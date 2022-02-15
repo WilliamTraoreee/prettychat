@@ -6,6 +6,7 @@ import { useSearchParams } from "react-router-dom";
 import { Message } from "../../types/Messages";
 import Will from "../../themes/Will/Will";
 import CleanyBear from "../../themes/CleanyBear/CleanyBear";
+import BearBoy from "../../themes/BearBoy/BearBoy";
 
 export default function Chat() {
   const [searchParams] = useSearchParams();
@@ -87,6 +88,8 @@ export default function Chat() {
       return <Will messages={messages} />;
     case "CleanyBear":
       return <CleanyBear messages={messages} />;
+    case "BearBoy":
+      return <BearBoy messages={messages} />;
     default:
       return <Terminal messages={messages} />;
   }
