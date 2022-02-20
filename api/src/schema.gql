@@ -1,0 +1,95 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type AdminUser implements User {
+  createdAt: DateTime!
+  id: ID!
+}
+
+type ClassicUser implements User {
+  createdAt: DateTime!
+  id: ID!
+}
+
+input ClassicUserPasswordResetRequestInput {
+  email: String!
+}
+
+input CreateAdminUserInput {
+  email: String!
+  password: String!
+}
+
+input CreateClassicUserInput {
+  email: String!
+  password: String!
+}
+
+input CreateTemplateInput {
+  """Example field (placeholder)"""
+  exampleField: Int!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+type Mutation {
+  createAdminUser(createAdminUserInput: CreateAdminUserInput!): AdminUser!
+  createClassicUser(createClassicUserInput: CreateClassicUserInput!): ClassicUser!
+  createTemplate(createTemplateInput: CreateTemplateInput!): Template!
+  login(input: LoginInput!): String!
+  loginAdmin(input: LoginInput!): String!
+  passwordResetClassicUser(input: PasswordResetClassicUserInput!): Boolean!
+  removeClassicUser(classicUserId: String!): Boolean!
+  removeTemplate(id: Int!): Template!
+  requestPasswordResetClassicUser(input: ClassicUserPasswordResetRequestInput!): Boolean!
+  updateTemplate(updateTemplateInput: UpdateTemplateInput!): Template!
+}
+
+input PasswordResetClassicUserInput {
+  newPassword: String!
+  passwordResetToken: String!
+}
+
+type Query {
+  classicUser(id: String!): ClassicUser!
+  classicUsers: [ClassicUser!]!
+  me: User!
+  meAsAdmin: User!
+  meAsClassicUser: ClassicUser!
+  template(id: Int!): Template!
+  user(id: ID!): User!
+  userEmailExists(email: String!): Boolean!
+}
+
+type Template {
+  createdAt: DateTime!
+  id: ID!
+  name: String!
+  type: TemplateType!
+}
+
+enum TemplateType {
+  chat
+  subAlert
+  subGiftAlert
+}
+
+input UpdateTemplateInput {
+  """Example field (placeholder)"""
+  exampleField: Int
+  id: Int!
+}
+
+interface User {
+  createdAt: DateTime!
+  id: ID!
+}

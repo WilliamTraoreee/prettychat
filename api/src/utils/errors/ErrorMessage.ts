@@ -1,0 +1,14 @@
+export enum ErrorMessage {
+  WRONG_CREDENTIALS = 'wrong_credentials',
+  EMAIL_ALREADY_EXISTS = 'email_already_exists',
+  INVALID_PASSWORD_RESET_TOKEN = 'invalid_password_reset_token',
+  MAX_FILE_LIMIT_REACHED = 'max_file_limit_reached',
+}
+
+export enum ErrorCode {
+  WRONG_CREDENTIALS = 'WRONG_CREDENTIALS',
+  EMAIL_ALREADY_EXISTS = 'EMAIL_ALREADY_EXISTS',
+  NOT_FOUND = 'NOT_FOUND',
+  INVALID_PASSWORD_RESET_TOKEN = 'INVALID_PASSWORD_RESET_TOKEN',
+  MAX_FILE_LIMIT_REACHED = 'MAX_FILE_LIMIT_REACHED',
+}

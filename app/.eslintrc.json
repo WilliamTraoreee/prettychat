@@ -1,0 +1,48 @@
+{
+  "extends": ["react-app", "plugin:jsonc/recommended-with-json"],
+  "plugins": ["import", "sort-imports-es6-autofix"],
+  "ignorePatterns": ["**/*.generated.tsx"],
+  "overrides": [
+    {
+      "files": ["*.gql", "*.graphql"],
+      "parser": "@graphql-eslint/eslint-plugin",
+      "plugins": ["@graphql-eslint"],
+      "rules": {
+        "@graphql-eslint/fields-on-correct-type": "error",
+        "@graphql-eslint/require-id-when-available": "error",
+        "@graphql-eslint/unique-fragment-name": "warn",
+        "@graphql-eslint/no-anonymous-operations": "error",
+        "@graphql-eslint/no-operation-name-suffix": "error",
+        "@graphql-eslint/avoid-duplicate-fields": "error"
+      }
+    }
+  ],
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "styled-components",
+            "message": "Please import from styled-components/macro."
+          }
+        ],
+        "patterns": ["!styled-components/macro"]
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["external", "builtin"],
+          ["index", "internal", "sibling", "parent"]
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}

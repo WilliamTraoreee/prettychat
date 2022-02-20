@@ -14,40 +14,21 @@
 
 # PrettyChat - Prettier chat for Twitch streamer
 
-PrettyChat is a tool for Twitch streamer that want display a beautiful chat on they're stream.
+PrettyChat is a tool for Twitch streamer that want display a beautiful chat on they're stream. 
 
 ## How it works
 
-The goal is to build an easy and user friendly way to make a beautiful stream overlay.
+The goal is to build an easy and user friendly way to make a beautiful stream overlay. 
 You don't need to login, we don't record any data from you and it's completely free.
 
-You have just to put your Twitch username, choose a theme a we do the magic.
+You have just to put your Twitch username, choose a theme a we do the magic. 
 
 ### Tools
 
 PrettyChat is an open source project build with ReactJS (Create React App).
-For get the chat message of a channel, we use <a href="https://github.com/tmijs/tmi.js" target="_blank">Tmi.JS</a>
+For get the chat message of a channel, we use <a href="https://github.com/tmijs/tmi.js" target="_blank">Tmi.JS</a> 
 
-### Quick start API
-
-```jsx
-// install and launch the database
-docker-compose up -d
-// go to the api
-cd api
-// Install the project
-npm install
-// add the uuid plugin to the db
-npx mikro-orm database:import ./src/migrations/uuid-osp.sql
-// migrate the db and install the seed
-npm run schema:update
-// add seed
-npm run schema:seed
-// start the dev server
-npm run start:dev
-```
-
-### Quick start App
+### Quick start
 
 ```jsx
 // Install the project
@@ -56,10 +37,6 @@ npm install
 npm start
 // Build the project
 npm run build
-// For generate graphql schema
-npm run generate
-// For generate graphqk schema and watch for change
-npm run generate:watch
 ```
 
 ### Roadmap

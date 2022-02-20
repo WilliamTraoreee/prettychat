@@ -1,0 +1,21 @@
+schema: "http://localhost:4000/graphql"
+documents: "src/**/*.graphql"
+generates:
+  src/graphql/types.ts:
+    plugins:
+      - "typescript"
+  src/graphql/introspection-result.ts:
+    plugins:
+      - fragment-matcher
+    config:
+      apolloClientVersion: 3
+  src/:
+    preset: near-operation-file
+    presetConfig:
+      baseTypesPath: graphql/types.ts
+      extension: .generated.tsx
+    plugins:
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
