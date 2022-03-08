@@ -7,6 +7,7 @@ import { Message } from "../../types/Messages";
 import Will from "../../themes/Will/Will";
 import CleanyBear from "../../themes/CleanyBear/CleanyBear";
 import BearBoy from "../../themes/BearBoy/BearBoy";
+import Willv2 from "../../themes/Willv2/Willv2";
 
 export default function Home() {
   const [username, setUsername] = useState<string>("");
@@ -69,6 +70,7 @@ export default function Home() {
                 <option value="Will">Will</option>
                 <option value="CleanyBear">CleanyBear</option>
                 <option value="BearBoy">BearBoy</option>
+                <option value="Willv2">Will v2</option>
               </select>
             </section>
 
@@ -83,6 +85,7 @@ export default function Home() {
           {theme === "Will" && <Will messages={[...demo]} />}
           {theme === "CleanyBear" && <CleanyBear messages={[...demo]} />}
           {theme === "BearBoy" && <BearBoy messages={[...demo]} />}
+          {theme === "Willv2" && <Willv2 messages={[...demo]} />}
         </div>
       </div>
     </div>
