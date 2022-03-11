@@ -7,6 +7,7 @@ import { Message } from "../../types/Messages";
 import Will from "../../themes/Will/Will";
 import CleanyBear from "../../themes/CleanyBear/CleanyBear";
 import BearBoy from "../../themes/BearBoy/BearBoy";
+import Willv2 from "../../themes/Willv2/Willv2";
 
 export default function Chat() {
   const [searchParams] = useSearchParams();
@@ -90,6 +91,8 @@ export default function Chat() {
       return <CleanyBear messages={messages} />;
     case "BearBoy":
       return <BearBoy messages={messages} />;
+    case "Willv2":
+      return <Willv2 messages={messages} />;
     default:
       return <Terminal messages={messages} />;
   }
