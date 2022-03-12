@@ -31,18 +31,6 @@
     align-items: flex-end;
     animation: pop 1s cubic-bezier(1, 0, 0, 1) both;
     position: relative;
-
-    overflow-wrap: break-word;
-    max-width: 100%;
-    vertical-align: baseline;
-    line-height: 1.4;
-    color: black;
-
-    img {
-      width: 36px;
-      height: auto;
-      vertical-align: middle;
-    }
   }
 
   .name {
@@ -68,5 +56,16 @@
     line-height: 1.4;
     text-align: right;
     font-weight: 600;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    vertical-align: baseline;
+    line-height: 1.4;
+
+    img {
+      width: 24px;
+      height: auto;
+      vertical-align: middle;
+      margin: 0 4px;
+    }
   }
 }
