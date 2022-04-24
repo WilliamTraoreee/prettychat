@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap");
+
+.theme-zyrophr {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 32px;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  padding: 32px;
+
+  @keyframes pop {
+    0% {
+      opacity: 0;
+      left: 110%;
+    }
+
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  .msg {
+    border: 2px solid white;
+    border-radius: 16px;
+    margin-top: 24px;
+    animation: pop 1s cubic-bezier(1, 0, 0, 1) both;
+    position: relative;
+  }
+
+  .name {
+    height: 32px;
+    background: white;
+    display: inline-flex;
+    align-items: center;
+    color: #6b40d6;
+    width: 100%;
+    padding: 0 16px;
+    font-weight: 900;
+    font-size: 12px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .message {
+    padding: 16px;
+    background: rgba(white, 0.16);
+    color: white;
+    font-size: 12px;
+    border-radius: 16px;
+    line-height: 1.4;
+    text-align: right;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    vertical-align: baseline;
+    line-height: 1.4;
+
+    img {
+      width: 24px;
+      height: auto;
+      vertical-align: middle;
+      margin: 0 4px;
+    }
+  }
+}
