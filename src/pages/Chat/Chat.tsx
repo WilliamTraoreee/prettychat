@@ -9,6 +9,7 @@ import CleanyBear from "../../themes/CleanyBear/CleanyBear";
 import BearBoy from "../../themes/BearBoy/BearBoy";
 import Willv2 from "../../themes/Willv2/Willv2";
 import Zyrophr from "../../themes/Zyrophr/Zyrophr";
+import Toham from "../../themes/Toham/Toham";
 
 export default function Chat() {
   const [searchParams] = useSearchParams();
@@ -96,6 +97,8 @@ export default function Chat() {
       return <Willv2 messages={messages} />;
     case "Zyrophr":
       return <Zyrophr messages={messages} />;
+    case "Toham":
+      return <Toham messages={messages} />;
     default:
       return <Terminal messages={messages} />;
   }
