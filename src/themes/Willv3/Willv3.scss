@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
+
+.theme-willv3 {
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 32px;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  padding: 32px;
+
+  @keyframes pop {
+    0% {
+      opacity: 0;
+      left: 110%;
+    }
+
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  .msg {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    animation: pop 1s cubic-bezier(1, 0, 0, 1) both;
+    position: relative;
+  }
+
+  .name {
+    display: inline-flex;
+    height: 38px;
+    border-radius: 8px;
+    padding: 0 12px;
+    background: white;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    color: black;
+    border: 1px solid black;
+  }
+
+  .message {
+    padding: 12px;
+    background: white;
+    color: black;
+    border-radius: 8px;
+    margin-top: 8px;
+    line-height: 1.4;
+    text-align: right;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    vertical-align: baseline;
+    line-height: 1.4;
+    border: 1px solid black;
+
+    img {
+      width: 24px;
+      height: auto;
+      vertical-align: middle;
+      margin: 0 4px;
+    }
+  }
+}
