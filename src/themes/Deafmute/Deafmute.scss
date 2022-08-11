@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "apple_ii_proregular";
+  src: url("../../../public/fonts/apple_ii_pro-webfont.woff2") format("woff2"),
+    url("../../../public/fonts/apple_ii_pro-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.theme-deafmute {
+  font-family: "apple_ii_proregular", sans-serif;
+  margin-bottom: 32px;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  padding: 32px;
+
+  @keyframes pop {
+    0% {
+      opacity: 0;
+      left: 110%;
+    }
+
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  .msg {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    animation: pop 1s cubic-bezier(1, 0, 0, 1) both;
+    position: relative;
+  }
+
+  .box {
+    border: 2px solid white;
+  }
+
+  .box-copy {
+    border: 2px solid white;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    z-index: -1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .name {
+    display: flex;
+    height: 34px;
+    width: 100%;
+    background: white;
+    align-items: center;
+    color: black;
+    justify-content: center;
+    font-size: 12px;
+    position: relative;
+
+    .close {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8px;
+      display: flex;
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid black;
+    }
+  }
+
+  .message {
+    padding: 12px;
+    background: black;
+    color: white;
+    line-height: 1.4;
+    text-align: right;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    vertical-align: baseline;
+    font-size: 12px;
+
+    img {
+      width: 24px;
+      height: auto;
+      vertical-align: middle;
+      margin: 0 4px;
+    }
+  }
+}
