@@ -13,6 +13,7 @@ import Toham from "../../themes/Toham/Toham";
 import Willv3 from "../../themes/Willv3/Willv3";
 import BenAndBak from "../../themes/BenAndBak/BenAndBak";
 import Deafmute from "../../themes/Deafmute/Deafmute";
+import Pxalafois from "../../themes/Pxalafois/Pxalafois";
 
 export default function Chat() {
   const [searchParams] = useSearchParams();
@@ -108,6 +109,8 @@ export default function Chat() {
       return <BenAndBak messages={messages} />;
     case "Deafmute":
       return <Deafmute messages={messages} />;
+    case "Pxalafois":
+        return <Pxalafois messages={messages} />;
     default:
       return <Terminal messages={messages} />;
   }

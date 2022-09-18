@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,500;1,800&display=swap");
+
+.theme-pxalafois {
+  font-family: "Montserrat Alternates", sans-serif;
+  margin-bottom: 32px;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  display: flex;
+  padding: 32px;
+
+  @keyframes pop {
+    0% {
+      opacity: 0;
+      left: 110%;
+    }
+
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  .msg {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    animation: pop 1s cubic-bezier(1, 0, 0, 1) both;
+    position: relative;
+  }
+
+  .name {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 800;
+    font-size: 24px;
+  }
+
+  .message {
+    padding: 14px 12px;
+    background: transparent;
+    color: white;
+    margin-top: 0px;
+    line-height: 1.4;
+    text-align: right;
+    font-weight: 500;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    vertical-align: baseline;
+    line-height: 1.4;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    margin-top: -1px;
+    font-size: 16px;
+
+    img {
+      width: 24px;
+      height: auto;
+      vertical-align: middle;
+      margin: 0 4px;
+    }
+  }
+}

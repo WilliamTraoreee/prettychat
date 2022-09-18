@@ -12,6 +12,7 @@ import Zyrophr from "../../themes/Zyrophr/Zyrophr";
 import Toham from "../../themes/Toham/Toham";
 import Willv3 from "../../themes/Willv3/Willv3";
 import BenAndBak from "../../themes/BenAndBak/BenAndBak";
+import Pxalafois from "../../themes/Pxalafois/Pxalafois";
 
 export default function Home() {
   const [username, setUsername] = useState<string>("");
@@ -79,6 +80,7 @@ export default function Home() {
                 <option value="Toham">Toham</option>
                 <option value="Willv3">Willv3</option>
                 <option value="BenAndBak">BenAndBak</option>
+                <option value="Pxalafois">Pxalafois</option>
               </select>
             </section>
 
@@ -98,6 +100,7 @@ export default function Home() {
           {theme === "Toham" && <Toham messages={[...demo]} />}
           {theme === "Willv3" && <Willv3 messages={[...demo]} />}
           {theme === "BenAndBak" && <BenAndBak messages={[...demo]} />}
+          {theme === "Pxalafois" && <Pxalafois messages={[...demo]} />}
         </div>
       </div>
     </div>
