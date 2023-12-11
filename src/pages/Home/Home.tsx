@@ -73,8 +73,6 @@ export default function Home() {
               >
                 <option value="Terminal">Terminal</option>
                 <option value="Will">Will</option>
-                <option value="CleanyBear">CleanyBear</option>
-                <option value="BearBoy">BearBoy</option>
                 <option value="Willv2">Will v2</option>
                 <option value="Zyrophr">Zyrophr</option>
                 <option value="Toham">Toham</option>
